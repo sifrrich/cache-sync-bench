@@ -28,9 +28,9 @@ To build the benchmark on linux, only pthreads is needed. Run
 
 ## Results<a name="results"></a>
 
-`make run` starts the benchmark using perf to get information about cache hits.
+`make run` starts the benchmark using perf to get information on cache hits and run time.
 
-A **Intel(R) Core(TM) i7-4790 CPU** produced the following results:
+An **Intel(R) Core(TM) i7-4790 CPU** produced the following results:
 
 ```
 perf stat -e LLC-loads,LLC-stores,L1-dcache-loads,L1-dcache-stores ./bench 0
