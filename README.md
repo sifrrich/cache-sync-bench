@@ -60,3 +60,4 @@ smt: sum: 268435456, time: 1.386351
 
 - Each LLC store is also a store to L1.
 - Using smt, ``sync_add_and_fetch()`` only results in L1 stores, while different cores have to communicate via shared L3.
+- Note that `LLC-loads` for core synchronization cannot be valid, since each core has to load the value from L3 before it can be updated.
