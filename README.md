@@ -1,12 +1,12 @@
 # cache-sync-bench
 ## 
-Comparison of synchronisation via L1 or L3 cache. Two threads are created and assigned to different logical proccessors, which are either located on a single core (L1 sync) or different cores, connected via L3.
+Comparison of synchronisation via L1 or L3 cache. Two threads are created and assigned to different logical proccessors, either located on a single core (L1 sync) or different cores (L3 sync).
 
 ## Usage
 
 To find out, which logical CPUs are physically located on the same core, refer to
 
-`awk '/^domain/ { print $1, $2; } /^cpu/ { print $1; }' /proc/schedsta`
+`awk '/^domain/ { print $1, $2; } /^cpu/ { print $1; }' /proc/schedstat`
 
 or
 
